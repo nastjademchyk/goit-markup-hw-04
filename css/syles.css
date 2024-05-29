@@ -186,7 +186,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #f4f4fd;
+  /* fill: #f4f4fd; */
 }
 
 .visually-hidden {
@@ -569,7 +569,7 @@ section {
   fill: #f4f4fd;
 }
 .link-icon-footer:hover, 
-link-icon-footer:focus
+.link-icon-footer:focus
 {
   background-color: #31d0aa
 }
