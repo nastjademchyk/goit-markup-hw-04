@@ -92,6 +92,7 @@ section {
   width: 100%;
   position: absolute;
   bottom: -1px; 
+  content: ""; 
 }
 
 
@@ -126,8 +127,11 @@ section {
 .first-menu-item{
   color: #404bbf; 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 .first-menu-item::after{
+  content: ""; 
+  left: 0; 
   width: 100%;
   bottom: -1px;
 }
