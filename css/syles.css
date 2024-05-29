@@ -82,12 +82,19 @@ section {
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 3%;
-  color: #4d5ae5;
+  color: #404bbf;
   text-decoration: none;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-right: 76px;
 }
+.logo::after{
+  width: 100%;
+  position: absolute;
+  bottom: -1px; 
+}
+
+
 .page-address {
   font-style: normal;
 }
@@ -362,7 +369,7 @@ section {
 
 .link-icon:hover,
 .link-icon:focus {
-  background-color: #31d0aa;
+  background-color: #404bbf;;
 }
 /*--------------------------------Section Portfolio----------------------*/
 .portfolio-title-main {
