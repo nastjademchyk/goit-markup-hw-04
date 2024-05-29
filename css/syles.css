@@ -40,7 +40,8 @@ section {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header .container {
@@ -143,12 +144,12 @@ section {
   min-width: 169px;
   height: 56px;
   border: none;
-  max-width: 1440рх;
+  transition: background-color;
 }
 
 .button-order:hover,
 .button-order:focus {
-  background-color: #404bbf;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-------------------------Section Features-------------------*/
@@ -165,6 +166,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: #f4f4fd;
 }
 
 .visually-hidden {
@@ -212,6 +214,9 @@ section {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
+  max-width: 1440px;
+  background-position: center;
+  background-size: cover;
 }
 .features-container-list {
   width: calc((100% - 72px) / 4);
@@ -293,6 +298,8 @@ section {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .members-name {
@@ -314,12 +321,9 @@ section {
   text-align: center;
 }
 .member-title {
-  padding-top: 32px;
-  padding-bottom: 8px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 32px 0;
 }
-.list {
+.list-team {
   display: flex;
   justify-content: center;
   gap: 24px;
@@ -327,19 +331,26 @@ section {
   align-self: flex-end;
   margin-bottom: 32px;
 }
+
+.item-team {
+  width: 40px;
+  height: 40px;
+}
+
 .link-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #4d5ae5;
   fill: #f4f4fd;
   transition-property: background-color;
 }
 
-.link-icon:hover {
+.link-icon:hover,
+.link-icon:focus {
   background-color: #31d0aa;
 }
 /*--------------------------------Section Portfolio----------------------*/
@@ -362,10 +373,16 @@ section {
   flex-wrap: wrap;
   gap: 24px;
   row-gap: 48px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-list:hover .overlay-text {
+  transform: translateY(0%);
 }
 
 .box-portfolio {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-title {
@@ -406,6 +423,19 @@ section {
   height: 100%;
 }
 
+.overlay-text {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .box-img {
   position: relative;
   overflow: hidden;
@@ -425,9 +455,9 @@ section {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   background: #4d5ae5;
-  padding-top:40px; 
-  padding-left: 32px; 
-  padding-right: 32px; 
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
   padding-bottom: 164px;
 }
 
@@ -446,7 +476,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-
 }
 .footer-accent {
   font-family: Raleway;
@@ -487,14 +516,19 @@ section {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
-  
 }
 
 .logo-footer-text {
   margin-right: 120px;
 }
 
-.list{
+.list {
   display: flex;
   gap: 16px;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
