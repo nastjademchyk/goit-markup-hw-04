@@ -88,13 +88,12 @@ section {
   text-transform: uppercase;
   margin-right: 76px;
 }
-.logo::after{
+.logo::after {
   width: 100%;
   position: absolute;
-  bottom: -1px; 
-  content: ""; 
+  bottom: -1px;
+  content: "";
 }
-
 
 .page-address {
   font-style: normal;
@@ -124,16 +123,66 @@ section {
   color: #404bbf;
 }
 
-.first-menu-item{
-  color: #404bbf; 
+.link-menu {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #2e2f42;
+  text-decoration: none;
+  padding: 24px 0 24px;
+  position: relative;
+}
+.link-menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 4px;
+  background: #404bbf;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.link-menu:hover::after {
+  width: 100%;
+}
+
+.link-menu:hover,
+.link-menu:focus {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #404bbf;
+}
+
+.link-menu:active {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #404bbf;
+  text-decoration: underline;
+}
+
+.first-menu-item {
+  color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
-.first-menu-item::after{
-  content: ""; 
-  left: 0; 
-  width: 100%;
+.first-menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
   bottom: -1px;
+  display: block;
+  width: 100%;
+
 }
 /* -------------------------Hero Solutions-------------------*/
 
@@ -246,53 +295,6 @@ section {
   margin: 0 auto;
 }
 
-.link-menu {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: left;
-  color: #2e2f42;
-  text-decoration: none;
-  padding: 24px 0 24px;
-  position: relative;
-}
-.link-menu::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 4px;
-  background: #404bbf;
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-.link-menu:hover::after {
-  width: 100%;
-}
-
-.link-menu:hover,
-.link-menu:focus {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: left;
-  color: #404bbf;
-}
-
-.link-menu:active {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: left;
-  color: #404bbf;
-  text-decoration: underline;
-}
-
 /*-------------------------------Team members-------------------------*/
 
 .people {
@@ -368,12 +370,11 @@ section {
   fill: #f4f4fd;
   transition-property: background-color;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .link-icon:hover,
 .link-icon:focus {
-  background-color: #404bbf;;
+  background-color: #404bbf;
 }
 /*--------------------------------Section Portfolio----------------------*/
 .portfolio-title-main {
@@ -407,9 +408,10 @@ section {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
- .box-portfolio:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
- }
+.box-portfolio:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 .portfolio-title {
   font-size: 20px;
@@ -556,20 +558,21 @@ section {
 .item {
   width: 40px;
   height: 40px;
+}
+.first-item {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-icon-footer{
-  width: 100%; 
-  height: 100%; 
-  background-color:  #4d5ae5; 
-  border-radius:50%; 
+.link-icon-footer {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
   fill: #f4f4fd;
 }
-.link-icon-footer:hover, 
-.link-icon-footer:focus
-{
-  background-color: #31d0aa
+.link-icon-footer:hover,
+.link-icon-footer:focus {
+  background-color: #31d0aa;
 }
